@@ -18,7 +18,7 @@ public class Uno1 extends javax.swing.JFrame {
 
     public Uno1() {
         initComponents();
-        llena.Rellenar("usuarios", "Nombre", XD);
+        llena.Rellenar("usuarios1", "Nombre", XD);
         id.setText(String.valueOf(x));
         CargarTabla(1);
         // Tabla.getTableHeader().setReorderingAllowed(false);
@@ -350,7 +350,7 @@ public class Uno1 extends javax.swing.JFrame {
         DefaultTableModel mode = (DefaultTableModel) Tabla.getModel();
         BaseConexion mysql = new BaseConexion();
         Connection cn = mysql.getConectarDB();
-        sSQL = "SELECT * FROM datos_usuarios";
+        sSQL = "SELECT * FROM datos_usuarios1";
         mode.setRowCount(0);
         try {
             Statement st = cn.createStatement();
@@ -420,7 +420,7 @@ public class Uno1 extends javax.swing.JFrame {
             java.sql.Date fech = new java.sql.Date(d);
             System.out.println(fech);
 
-            sSQL = "INSERT INTO datos_usuarios( Nombre, Apellido, Telefono, Domicilio, Fecha) VALUES(?,?,?,?,?)";
+            sSQL = "INSERT INTO datos_usuarios1( Nombre, Apellido, Telefono, Domicilio, Fecha) VALUES(?,?,?,?,?)";
             try {
                 PreparedStatement pst = cn.prepareStatement(sSQL);
                 //pst.setInt(1, idd);

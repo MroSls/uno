@@ -14,7 +14,7 @@ public class obtencionDedatos {
 
     public void ingreso(String usu, String con) {
 
-        sSQL = "SELECT * FROM usuarios WHERE Usuario='" + usu + "' AND Contraseña='" + con + "'";
+        sSQL = "SELECT * FROM usuarios1 WHERE Usuario='" + usu + "' AND Contraseña='" + con + "'";
         try {
             Statement st = cn.createStatement();
             ResultSet rs = st.executeQuery(sSQL);
